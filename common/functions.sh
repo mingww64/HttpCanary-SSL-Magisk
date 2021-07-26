@@ -109,7 +109,7 @@ prop_process() {
 ui_print "**************************************"
 ui_print "*   MMT Extended by Zackptg5 @ XDA   *"
 ui_print "**************************************"
-ui_print " "
+ui_print "HttpCanary installation start... "
 
 # Check for min/max api version
 [ -z $MINAPI ] || { [ $API -lt $MINAPI ] && abort "! Your system API of $API is less than the minimum api of $MINAPI! Aborting!"; }
@@ -182,9 +182,14 @@ if [ -f $INFO ]; then
 fi
 
 ### Install
-ui_print "- Installing"
-
-[ -f "$MODPATH/common/install.sh" ] && . $MODPATH/common/install.sh
+ui_print "- Installing app"
+mv $MODPATH/app.apk "/data/local/tmp"
+set_perm "/data/local/tmp/app.apk" 0 0 0660
+su -c '/system/bin/pm install -r /data/local/tmp/app.apk'
+rm /data/local/tmp/app.apk
+mkdir -p /data/data/com.guoshi.httpcanary.premium/cache
+touch /data/data/com.guoshi.httpcanary.premium/cache/HttpCanary.jks
+cp $MODPATH/system/etc/security/cacerts/87bc3517.0 /data/data/com.guoshi.httpcanary.premium/cache/
 
 ui_print "   Installing for $ARCH SDK $API device..."
 # Remove comments from files and place them, add blank line to end if not already present

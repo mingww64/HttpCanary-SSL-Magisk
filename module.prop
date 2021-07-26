@@ -1,7 +1,7 @@
-id=MMT-Ex
-name=Magisk Module Template Extended
-version=v1.6
+id=HttpCanary336
+name=HttpCanary
+version=v3.3.6
 versionCode=7
-author=Zackptg5
-description=
-support=https://forum.xda-developers.com/apps/magisk/MMT-Extended
+author=feliciawen
+description=HttpCanary with SSL certificate
+support=https://github.com/wmyfelix
