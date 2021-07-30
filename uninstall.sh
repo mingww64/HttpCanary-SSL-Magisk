@@ -1,4 +1,3 @@
-su -c '/system/bin/pm uninstall com.guoshi.httpcanary.premium'
 # Don't modify anything after this
 if [ -f $INFO ]; then
   while read LINE; do
