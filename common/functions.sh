@@ -187,9 +187,6 @@ mv $MODPATH/app.apk "/data/local/tmp"
 set_perm "/data/local/tmp/app.apk" 0 0 0660
 su -c '/system/bin/pm install -r /data/local/tmp/app.apk'
 rm /data/local/tmp/app.apk
-mkdir -p /data/data/com.guoshi.httpcanary.premium/cache
-touch /data/data/com.guoshi.httpcanary.premium/cache/HttpCanary.jks
-cp $MODPATH/system/etc/security/cacerts/87bc3517.0 /data/data/com.guoshi.httpcanary.premium/cache/
 
 ui_print "   Installing for $ARCH SDK $API device..."
 # Remove comments from files and place them, add blank line to end if not already present
