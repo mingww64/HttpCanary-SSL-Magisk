@@ -164,6 +164,8 @@ fi
 # Remove files outside of module directory
 ui_print "- Removing old files"
 
+su -c '/system/bin/pm uninstall com.guoshi.httpcanary.premium' 2>/dev/null
+
 if [ -f $INFO ]; then
   while read LINE; do
     if [ "$(echo -n $LINE | tail -c 1)" == "~" ]; then
