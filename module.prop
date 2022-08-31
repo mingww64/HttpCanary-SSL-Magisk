@@ -1,7 +1,7 @@
 id=HttpCanary336
 name=HttpCanary
 version=v3.3.6
-versionCode=7
-author=feliciawen
+versionCode=8
+author=FeliciaWen
 description=HttpCanary with SSL certificate
 support=https://github.com/wmyfelix
