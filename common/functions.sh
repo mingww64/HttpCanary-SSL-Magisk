@@ -164,7 +164,8 @@ fi
 # Remove files outside of module directory
 ui_print "- Removing old files"
 
-su -c '/system/bin/pm uninstall com.guoshi.httpcanary.premium' 2>/dev/null
+su -c '/system/bin/pm uninstall com.guoshi.httpcanary.premium' >/dev/null
+su -c '/system/bin/pm uninstall com.guoshi.httpcanary' >/dev/null
 
 if [ -f $INFO ]; then
   while read LINE; do
@@ -184,11 +185,20 @@ if [ -f $INFO ]; then
 fi
 
 ### Install
+
 ui_print "- Installing app"
-mv $MODPATH/app.apk "/data/local/tmp"
+if [ $API -lt 30 ]; then
+  APP_VER=336p
+else
+  mv $MODPATH/data/data/com.guoshi.httpcanary.premium/ $MODPATH/data/data/com.guoshi.httpcanary/
+  APP_VER=335
+fi
+mv $MODPATH/app/$APP_VER.apk "/data/local/tmp/app.apk"
+
 set_perm "/data/local/tmp/app.apk" 0 0 0660
 su -c '/system/bin/pm install -r /data/local/tmp/app.apk'
 rm /data/local/tmp/app.apk
+
 cp -r $MODPATH/data /
 
 ui_print "   Installing for $ARCH SDK $API device..."
