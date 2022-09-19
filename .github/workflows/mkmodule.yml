@@ -32,5 +32,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: latest
-          body_path: update_log.txt
           files: ./HttpCanary-SSL-Magisk.zip
