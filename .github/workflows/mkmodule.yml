@@ -25,7 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - name: Archive
-        run: 7z a -x'!.*' -tzip ./HttpCanary-SSL-Magisk.zip  ./*
+        run: 7z a -xr'!README|LICENSE|placeholder' -tzip ./HttpCanary-SSL-Magisk.zip  ./*
       - name: Release
         uses: softprops/action-gh-release@v1
         env:
