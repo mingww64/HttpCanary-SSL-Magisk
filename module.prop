@@ -1,7 +1,7 @@
-id=HttpCanary336
+id=HttpCanaryBundle
 name=HttpCanary
 version=v3.3.6
 versionCode=8
 author=FeliciaWen
-description=HttpCanary with SSL certificate
+description=HttpCanary Certificate Bundle
 support=https://github.com/wmyfelix
