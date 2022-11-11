@@ -1,4 +1,4 @@
-## **Http Canary Magisk Module**
+### Http Canary [MAGISK MÓDULO]
 
 > Http Canary empacotado com o certificado.
 
