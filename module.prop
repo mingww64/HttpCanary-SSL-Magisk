@@ -1,7 +1,8 @@
 id=HttpCanaryBundle
-name=HttpCanary
+name=Http Canary
 version=v3.3.6
 versionCode=8
 author=FeliciaWen
-description=HttpCanary Certificate Bundle
-support=https://github.com/wmyfelix
+modded=AkariOficial
+description=Http Canary Certificate Bundle
+support=https://github.com/AkariOficial
